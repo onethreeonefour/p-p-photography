@@ -1,5 +1,5 @@
 # P&P Photography
-A Photography portfolio website - made very quickly just to use use lightroom plugin. Worked as desired.
+A Photography portfolio website - made very quickly just to use the lightroom plugin. Worked as desired.
 
 Most of the design is inspired by many other photographers websites. Just grids layouts and mostly the pictures doing the heavy lifting in terms of the overall look of the website.
 
