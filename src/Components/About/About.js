@@ -22,10 +22,10 @@ function About() {
 
                         </ul>
                     </div>
-                    <a href="contact">CONTACT</a>
+                    <a href="#contact">CONTACT</a>
                 </div>
                 <div>
-                    <img src={`Images/Gallery/17.webp`}></img>
+                    <img src={`Images/Gallery/17.webp`} alt="contact"></img>
                 </div>
             </div>
         </div >
