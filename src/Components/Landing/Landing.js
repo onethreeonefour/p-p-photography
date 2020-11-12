@@ -15,7 +15,7 @@ function Landing() {
                 <div className="hero-grid">
                     <div>
                         <h1>Beautiful Moments Captured</h1>
-                        <h2>P&P Photography</h2>
+                        <h2>Pierce&Pierce Photography</h2>
                         <div className="hero-links">
                             <a href="#gallery">Portfolio</a>
                             <a href="#about">About</a>
