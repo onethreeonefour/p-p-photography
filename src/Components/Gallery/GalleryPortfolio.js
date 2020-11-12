@@ -10,7 +10,10 @@ function GalleryPortfolio() {
             <SRLWrapper>
                 <div className="gallery-grid">
                     {IMAGES.map((images, index) => {
-                        return <img src={images.src} alt={`Gallery Portrait ${index + 1}`} key={index}></img>
+                        return <div className="gallery-img-container" key={index}>
+                            <img src={images.src} alt={`Gallery Portrait ${index + 1}`} key={index}></img>
+                            <div className="centered">{images.name}</div>
+                        </div>
                     })}
                 </div>
             </SRLWrapper>

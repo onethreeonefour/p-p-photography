@@ -15,6 +15,7 @@
 * {
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 h1,
 h2,
@@ -22,13 +23,20 @@ h3,
 h4 {
     font-family: "Audrey";
 }
+p,
+a,
+li,
+label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+}
 
 .hero-container {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: rgb(243, 243, 243);
+
     h1 {
         font-size: 3.5rem;
         padding: 1rem;
@@ -54,6 +62,23 @@ h4 {
             font-size: 1.5rem;
         }
     }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 2rem;
+        cursor: pointer;
+        .icon {
+            width: 30px;
+            height: 30px;
+            transition: 0.1s all ease-in-out;
+        }
+        .icon:hover {
+            transform: scale(1.1);
+        }
+    }
+
     .hero-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -75,8 +100,11 @@ h4 {
 .gallery-portfolio {
     text-align: center;
     font-size: 3rem;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    padding-bottom: 3rem;
     h1 {
         padding: 4rem 0 4rem 0;
+        text-transform: uppercase;
     }
     .gallery-grid {
         margin-top: 4rem;
@@ -91,7 +119,256 @@ h4 {
         width: 100%;
         object-fit: cover;
         cursor: pointer;
+        transition: 0.4s all ease-in-out;
     }
     img:hover {
+        filter: saturate(0);
+    }
+    .gallery-img-container:hover .centered {
+        opacity: 1;
+    }
+    .gallery-img-container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    .centered {
+        opacity: 0;
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.4s all ease-in-out;
+        text-shadow: 4px 4px 6px black;
+    }
+}
+.about-container {
+    text-align: center;
+    font-size: 3rem;
+    h1 {
+        padding: 4rem 0 4rem 0;
+        text-transform: uppercase;
+        font-size: 4.5rem;
+        text-align: center;
+    }
+    .about-grid {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+        align-items: center;
+    }
+    .about-info {
+        padding: 2rem;
+        text-align: left;
+        p {
+            font-size: 1.3rem;
+        }
+        h4 {
+            margin-top: 2rem;
+            padding-bottom: 1rem;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            color: black;
+            border: 2px solid black;
+            padding: 2rem;
+            width: 50%;
+            font-size: 2rem;
+            margin: 4rem auto auto auto;
+            transition: all 0.4s ease-in-out;
+            font-weight: 400;
+        }
+        a:hover {
+            color: white;
+            background-color: black;
+        }
+        li {
+            text-decoration: none;
+            font-size: 1.3rem;
+            list-style-type: none;
+        }
+    }
+    img {
+        width: 100%;
+        display: block;
+    }
+}
+.contact-container {
+    text-align: center;
+    padding-bottom: 4rem;
+    h1 {
+        padding: 4rem 0 4rem 0;
+        text-transform: uppercase;
+        font-size: 4.5rem;
+        text-align: center;
+    }
+    .contact-grid {
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        box-shadow: 1px 4px 10px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        h2 {
+            text-transform: uppercase;
+            font-size: 2.3rem;
+            margin-top: 2rem;
+        }
+        h3 {
+            margin-top: 1rem;
+        }
+        .trading-hours {
+            background-color: rgba(0, 0, 0, 0.884);
+            width: 50%;
+            margin: 2rem auto auto auto;
+            color: white;
+            padding: 1.75rem;
+        }
+        label {
+            display: block;
+            font-weight: 400;
+        }
+        input,
+        textarea {
+            font-size: 1.1rem;
+            font-weight: 400;
+            width: 60%;
+            padding: 0.5rem;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        textarea {
+            height: 150px;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+            color: black;
+            border: 2px solid black;
+            padding: 2rem;
+            width: 50%;
+            font-size: 2rem;
+            margin: 4rem auto auto auto;
+            transition: all 0.4s ease-in-out;
+            font-weight: 400;
+        }
+        a:hover {
+            color: white;
+            background-color: black;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hero-container {
+        height: auto;
+        .hero-grid {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 5rem 0rem 5rem 0rem;
+        }
+        img {
+            height: 500px;
+            width: 100%;
+            margin-top: 3rem;
+        }
+    }
+    .gallery-portfolio {
+        .gallery-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .about-container {
+        .about-grid {
+            grid-template-columns: auto;
+        }
+        img {
+            height: 500px;
+            width: 100%;
+            margin-top: 3rem;
+            object-fit: cover;
+            padding: 2rem;
+        }
+    }
+
+    .contact-container {
+        .contact-grid {
+            width: 90%;
+        }
+    }
+}
+@media screen and (max-width: 414px) {
+    .hero-container {
+        .hero-links {
+            gap: 1rem;
+        }
+        img {
+            height: 250px;
+        }
+    }
+    .gallery-portfolio {
+        h1 {
+            font-size: 2.5rem;
+        }
+        img {
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: 0.4s all ease-in-out;
+        }
+        .centered {
+            font-size: 1.5rem;
+        }
+    }
+    .about-container {
+        .about-grid {
+            width: 100%;
+            padding-bottom: 3rem;
+        }
+        h1 {
+            padding: 4rem 0 4rem 0;
+            font-size: 2.5rem;
+        }
+        .about-info {
+            a {
+                width: 60%;
+            }
+            h4 {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .contact-container {
+        h1 {
+            font-size: 2.5rem;
+        }
+        .contact-grid {
+            width: 100%;
+
+            h2 {
+                margin-top: 2rem;
+            }
+            .trading-hours {
+                width: 90%;
+            }
+            input,
+            textarea,
+            a {
+                width: 90%;
+            }
+        }
     }
 }

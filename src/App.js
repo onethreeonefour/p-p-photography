@@ -1,6 +1,7 @@
 import Landing from './Components/Landing/Landing'
 import { Switch, Route } from 'react-router-dom';
 import SimpleReactLightbox from "simple-react-lightbox";
+import Footer from './Components/Navigation/Footer'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           <Route exact path="/" component={Landing} />
         </Switch>
       </SimpleReactLightbox>
+      <Footer />
     </>
   );
 }
