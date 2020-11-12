@@ -11,7 +11,7 @@ import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons"
 function Landing() {
     return (
         <>
-            <div className="hero-container">
+            <div className="hero-container" id="hero">
                 <div className="hero-grid">
                     <div>
                         <h1>Beautiful Moments Captured</h1>

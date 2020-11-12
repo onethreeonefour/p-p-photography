@@ -24,7 +24,7 @@ function Contact() {
                     <input></input>
                     <label>Enquiry</label>
                     <textarea></textarea>
-                    <a href="#">Submit</a>
+                    <a href="#hero">Submit</a>
                 </div>
             </div>
         </div>
